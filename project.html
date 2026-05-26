@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Jyrny Cenita</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="menu">
+        <a href="index.html" class="logo">
+            <img src="logo1.png" alt="Jyrny Cenita Logo">
+        </a>
+        <ul>
+            <li><a href="index.html"><img src="home2.png" alt="">HOME</a></li>
+            <li><a href="about.html"><img src="about.png" alt="">ABOUT</a></li>
+            <li><a href="project.html"><img src="services2.png" alt="">PROJECT</a></li>
+            <li><a href="contact.html"><img src="contact.png" alt="">CONTACT</a></li>
+        </ul>
+        <div class="socials">
+            <a href="https://www.facebook.com/uchihajyrny/" target="_blank"><img src="fb.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/jyrnyuchiha/" target="_blank"><img src="IG.png" alt="Instagram"></a>
+            <a href="https://mail.google.com/mail/?view=cm&to=jyrnycenita@gmail.com" target="_blank"><img src="email.png" alt="Email"></a>
+            <a href="https://www.linkedin.com/in/jyrny-cenita-30739536a/" target="_blank"><img src="link.png" alt="LinkedIn"></a>
+        </div>
+        <div class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+</header>
+
+<section class="portfolio-section" id="project">
+    <div class="portfolio-center">
+        <h1>PORT<span>FOLIO</span></h1>
+    </div>
+    <div class="portfolio-right">
+        <img src="pic.png" alt="Jyrny Cenita">
+    </div>
+</section>
+
+<section class="picture-section">
+    <div class="section-label"><span>Work</span></div>
+    <h2 class="picture-title">Project <span>Collection</span></h2>
+
+    <div class="picture-container">
+        <div class="picture-box">
+            <img src="Logo1.png" alt="Logo Design" onclick="openImage(this.src)">
+        </div>
+        <div class="picture-box">
+            <img src="tbl.png" alt="Capstone System" onclick="openImage(this.src)">
+        </div>
+        <div class="picture-box hidden-picture" id="thirdPicture">
+            <img src="caps1.png" alt="Capstone System 2" onclick="openImage(this.src)">
+        </div>
+    </div>
+
+    <button class="load-btn" onclick="showPicture()">Load More</button>
+</section>
+
+<!-- IMAGE VIEWER -->
+<div id="imageViewer" class="image-viewer">
+    <span class="close-btn" onclick="closeImage()">×</span>
+    <img id="viewerImg" alt="Project preview">
+</div>
+
+<footer class="footer">
+    <p class="footer-left">© 2026 Jyrny Cenita. All Rights Reserved.</p>
+    <div class="footer-center">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</footer>
+
+<script>
+function showPicture(){
+    const picture = document.getElementById("thirdPicture");
+    const button = document.querySelector(".load-btn");
+    if(picture.style.display === "block"){
+        picture.style.display = "none";
+        button.textContent = "Load More";
+    } else {
+        picture.style.display = "block";
+        button.textContent = "Show Less";
+    }
+}
+</script>
+<script src="script.js"></script>
+</body>
+</html>

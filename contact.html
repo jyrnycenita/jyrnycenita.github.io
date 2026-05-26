@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Jyrny Cenita</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body class="contact-page">
+
+<header>
+    <nav class="menu">
+        <a href="index.html" class="logo">
+            <img src="logo1.png" alt="Jyrny Cenita Logo">
+        </a>
+        <ul>
+            <li><a href="index.html"><img src="home2.png" alt="">HOME</a></li>
+            <li><a href="about.html"><img src="about.png" alt="">ABOUT</a></li>
+            <li><a href="project.html"><img src="services2.png" alt="">PROJECT</a></li>
+            <li><a href="contact.html"><img src="contact.png" alt="">CONTACT</a></li>
+        </ul>
+        <div class="socials">
+            <a href="https://www.facebook.com/uchihajyrny/" target="_blank"><img src="fb.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/jyrnyuchiha/" target="_blank"><img src="IG.png" alt="Instagram"></a>
+            <a href="https://mail.google.com/mail/?view=cm&to=jyrnycenita@gmail.com" target="_blank"><img src="email.png" alt="Email"></a>
+            <a href="https://www.linkedin.com/in/jyrny-cenita-30739536a/" target="_blank"><img src="link.png" alt="LinkedIn"></a>
+        </div>
+        <div class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+</header>
+
+<section class="contact-info-section">
+    <div class="contact-info-wrapper">
+        <div class="left-contact">
+            <h1 class="contact-title">Contact <span>Me</span></h1>
+            <div class="contact-details">
+                <p><b>Facebook:</b> uchihajyrny</p>
+                <p><b>Phone:</b> 09050510194</p>
+                <p><b>Email:</b> jyrnycenita@gmail.com</p>
+                <p><b>Address:</b> Dinagat Islands, Philippines</p>
+            </div>
+        </div>
+        <div class="right-contact">
+            <img src="img1.png" class="contact-img" alt="Jyrny Cenita">
+        </div>
+    </div>
+</section>
+
+<section class="contact-form-section">
+    <div class="form-container">
+        <div class="section-label"><span>Get In Touch</span></div>
+        <h2>Let's Talk About Your Project</h2>
+        <p>Fill in the form below and I'll get back to you as soon as possible.</p>
+
+        <form id="contact-form">
+            <input type="text" name="from_name" placeholder="Your Name *" required>
+            <input type="email" name="from_email" placeholder="Your Email *" required>
+            <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <p class="footer-left">© 2026 Jyrny Cenita. All Rights Reserved.</p>
+    <div class="footer-center">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+emailjs.init("HmizOj0s9WN62a2Vc");
+document.getElementById("contact-form").addEventListener("submit", function(event){
+    event.preventDefault();
+    const btn = this.querySelector('.submit-btn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    emailjs.sendForm("service_hez3q5m", "template_5f7rgq4", this)
+        .then(() => {
+            btn.textContent = 'Message Sent!';
+            btn.style.background = '#28a745';
+            this.reset();
+            setTimeout(() => {
+                btn.textContent = 'Send Message';
+                btn.style.background = '';
+                btn.disabled = false;
+            }, 3000);
+        }, () => {
+            btn.textContent = 'Send Message';
+            btn.disabled = false;
+            alert("Failed to send message. Please try again.");
+        });
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>

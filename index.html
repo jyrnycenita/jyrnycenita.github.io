@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jyrny Cenita — Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="menu">
+        <a href="index.html" class="logo">
+            <img src="logo1.png" alt="Jyrny Cenita Logo">
+        </a>
+
+        <ul>
+            <li><a href="index.html#home"><img src="home2.png" alt="">HOME</a></li>
+            <li><a href="about.html"><img src="about.png" alt="">ABOUT</a></li>
+            <li><a href="project.html"><img src="services2.png" alt="">PROJECT</a></li>
+            <li><a href="contact.html"><img src="contact.png" alt="">CONTACT</a></li>
+        </ul>
+
+        <div class="socials">
+            <a href="https://www.facebook.com/uchihajyrny/" target="_blank"><img src="fb.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/jyrnyuchiha/" target="_blank"><img src="IG.png" alt="Instagram"></a>
+            <a href="https://mail.google.com/mail/?view=cm&to=jyrnycenita@gmail.com" target="_blank"><img src="email.png" alt="Email"></a>
+            <a href="https://www.linkedin.com/in/jyrny-cenita-30739536a/" target="_blank"><img src="link.png" alt="LinkedIn"></a>
+        </div>
+
+        <div class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="intro">
+        <span class="small-text">Hey! My name is</span>
+        <h1 class="big-text">
+            <span>Jyrny</span>
+            <span>Cenita</span>
+        </h1>
+        <p class="hero-tagline">IT Student &amp; Web Developer &nbsp;|&nbsp; Graphic Designer &nbsp;|&nbsp; Hardware Technician</p>
+        <a href="contact.html" class="hero-cta">Hire Me</a>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number counter" data-target="3" data-suffix="">3</span>
+                <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number counter" data-target="83" data-suffix="%">83%</span>
+                <span class="stat-label">Skill Level</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number counter" data-target="30" data-suffix="">30</span>
+                <span class="stat-label">Clients</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="pic.png" class="my-picture" alt="Jyrny Cenita">
+    </div>
+</section>
+
+<!-- SKILLS -->
+<div class="icon-section">
+    <div class="icon-box">
+        <img src="html.png" alt="HTML">
+        <p>HTML</p>
+        <div class="skill-bar-track"><div class="skill html" data-percent="85"></div></div>
+        <span class="skill-percent">0%</span>
+    </div>
+    <div class="icon-box">
+        <img src="js.png" alt="JavaScript">
+        <p>JavaScript</p>
+        <div class="skill-bar-track"><div class="skill js" data-percent="80"></div></div>
+        <span class="skill-percent">0%</span>
+    </div>
+    <div class="icon-box">
+        <img src="sql.png" alt="MySQL">
+        <p>MySQL</p>
+        <div class="skill-bar-track"><div class="skill sql" data-percent="90"></div></div>
+        <span class="skill-percent">0%</span>
+    </div>
+    <div class="icon-box">
+        <img src="php.png" alt="PHP">
+        <p>PHP</p>
+        <div class="skill-bar-track"><div class="skill php" data-percent="80"></div></div>
+        <span class="skill-percent">0%</span>
+    </div>
+    <div class="icon-box">
+        <img src="css.png" alt="CSS">
+        <p>CSS</p>
+        <div class="skill-bar-track"><div class="skill CSS" data-percent="85"></div></div>
+        <span class="skill-percent">0%</span>
+    </div>
+    <div class="icon-box">
+        <img src="ps.png" alt="Photoshop">
+        <p>Photoshop</p>
+        <div class="skill-bar-track"><div class="skill ps" data-percent="80"></div></div>
+        <span class="skill-percent">0%</span>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<section class="projects-section">
+    <div class="section-label"><span>Work</span></div>
+    <h2 class="section-title">Latest Projects</h2>
+
+    <div class="projects-container">
+        <div class="project-box">
+            <img src="Logo1.png" alt="Logo Design" onclick="openImage(this.src)">
+            <div class="project-info">
+                <h3>LOGO DESIGN</h3>
+                <p>Graphic Designing</p>
+            </div>
+        </div>
+        <div class="project-box">
+            <img src="caps1.png" alt="Capstone System" onclick="openImage(this.src)">
+            <div class="project-info">
+                <h3>CAPSTONE SYSTEM</h3>
+                <p>Web Development</p>
+            </div>
+        </div>
+        <div class="project-box">
+            <img src="portfolio.png" alt="Website Portfolio" onclick="openImage(this.src)">
+            <div class="project-info">
+                <h3>WEBSITE PORTFOLIO</h3>
+                <p>Web Designing</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- IMAGE VIEWER -->
+<div id="imageViewer" class="image-viewer">
+    <span class="close-btn" onclick="closeImage()">×</span>
+    <img id="viewerImg" alt="Project preview">
+</div>
+
+<!-- EDUCATION -->
+<section class="education-section">
+    <div class="section-label"><span>Background</span></div>
+    <h2 class="section-title">Education &amp; Experience</h2>
+
+    <div class="education-container">
+        <div class="education-box">
+            <h3>Education</h3>
+            <div class="education-content">
+                <h4>Bachelor of Science in Information Technology</h4>
+                <p>Northeastern Mindanao Colleges</p>
+                <span>2023 — 2027</span>
+            </div>
+            <div class="education-content" style="margin-top:20px">
+                <h4>NC II Passer — Computer Systems Servicing</h4>
+                <p>TESDA</p>
+                <span>2022</span>
+            </div>
+        </div>
+        <div class="education-box">
+            <h3>Experience</h3>
+            <div class="education-content">
+                <h4>Web &amp; System Developer</h4>
+                <p>Capstone and Portfolio Projects</p>
+                <span>2024 — 2026</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+    <div class="section-label"><span>What I Do</span></div>
+    <h2 class="section-title">My Services</h2>
+
+    <div class="services-container">
+        <div class="service-box">
+            <img src="design.png" alt="Graphic Designing">
+            <h3>Graphic Designing</h3>
+            <p>Creating logos, posters, banners, and creative digital designs.</p>
+        </div>
+        <div class="service-box">
+            <img src="system dev.png" alt="System Development">
+            <h3>System Development</h3>
+            <p>Developing capstone systems with database integration and CRUD functionality.</p>
+        </div>
+        <div class="service-box">
+            <img src="services3.png" alt="Hardware Services">
+            <h3>Hardware Services</h3>
+            <p>OS Installation, Formatting, Network Setup, Printer Installation, and Laptop Repair.</p>
+        </div>
+        <div class="service-box">
+            <img src="web dev.png" alt="Web Development">
+            <h3>Web Development</h3>
+            <p>Creating responsive and functional websites and web systems.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="contact-section">
+    <div class="contact-container">
+        <div class="contact-cta-text">
+            <p>Got an idea?</p>
+            <h2>Let's build<br>something great</h2>
+            <a href="contact.html" class="contact-btn">Contact Me</a>
+        </div>
+        <div class="profile-image">
+            <img src="img1.png" alt="Jyrny Cenita">
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p class="footer-left">© 2026 Jyrny Cenita. All Rights Reserved.</p>
+    <div class="footer-center">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
