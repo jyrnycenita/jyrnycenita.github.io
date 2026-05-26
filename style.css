@@ -1070,7 +1070,7 @@ header {
     }
 
     .aboutme-right img {
-    transform: translateX( 10px);
+    transform: translateX( -40px);
     }
 
     .contact-info-wrapper {
