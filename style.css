@@ -1063,6 +1063,9 @@ header {
 
 @media (max-width: 768px) {
     /* NAV */
+     .my-picture {
+        transform: translateX(-12px);
+    }
     .menu { padding: 0 20px; }
     .hamburger { display: flex; }
 
