@@ -1119,11 +1119,13 @@ header {
         align-items: center;
     }
     .my-picture {
-        width: min(300px, 80vw);
-        margin: 0 auto;
-        display: block;
-        top: 0;
-    }
+    width: min(300px, 80vw);
+    margin: 0;
+    display: block;
+    position: static; /* 👈 important fix */
+    top: auto;
+    left: auto;
+}
 
     /* ICON */
     .icon-section { padding: 40px 20px; gap: 16px; }
